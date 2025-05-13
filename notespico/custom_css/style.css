@@ -1,0 +1,97 @@
+body {
+  padding: 0.5rem;
+}
+.close-app {
+  position: fixed;
+  top: 0.5rem;
+  right: 0.5rem;
+  z-index: 1000;
+  text-decoration: none;
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+  background-color: #eee;
+  color: #333;
+}
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 0.75rem;
+}
+.note {
+  position: relative;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.25rem;
+  background-color: #fff;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+.note-title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  padding-right: 2rem;
+}
+.note-content {
+  margin-bottom: 0.5rem;
+  white-space: pre-line;
+}
+.note-time {
+  font-size: 0.8rem;
+  color: #666;
+}
+.delete-btn {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #666;
+  font-size: 1.2rem;
+  padding: 0.2rem;
+  margin: 0;
+  display: inline-block;
+  line-height: 1;
+}
+.delete-btn:hover {
+  color: #e74c3c;
+}
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1001;
+  justify-content: center;
+  align-items: center;
+}
+.modal-content {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 0.25rem;
+  max-width: 90%;
+  width: 400px;
+}
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+.modal.active {
+  display: flex;
+}
+@media (max-width: 768px) {
+  h1, h2, h3, h4 {
+    margin-bottom: 1rem;
+  }
+  .note {
+    padding: 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+  textarea {
+    height: 100px;
+  }
+}
